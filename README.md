@@ -1,2 +1,3 @@
 # sts
-Configure an AWS profile using credentials found in the clipboard
+
+An Alfred workflow to configure an AWS profile using credentials found in the clipboard.
