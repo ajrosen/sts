@@ -33,7 +33,7 @@ if $(/usr/bin/grep -q '^aws_' <<< "$CLIPBOARD}"); then
 fi
 
 # aws --output json sts get-session-token
-2>&1 /usr/bin/jq '.Credentials' <<< "${CLIPBOARD}" > /dev/null
+2>&- /usr/bin/jq '.Credentials' <<< "${CLIPBOARD}" > /dev/null
 if [ $? == 0 ]; then
     eval $(/usr/bin/jq -r '"export AWS_ACCESS_KEY_ID=\(.Credentials.AccessKeyId)"' <<< "${CLIPBOARD}")
     eval $(/usr/bin/jq -r '"export AWS_SECRET_ACCESS_KEY=\(.Credentials.SecretAccessKey)"' <<< "${CLIPBOARD}")
