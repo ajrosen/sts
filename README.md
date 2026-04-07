@@ -25,7 +25,7 @@ You can use either **xsel** or **xclip** on Linux.
 
 ### Windows
 
-If you are using WSL, **powershell.exe -c Get-Clipboard** will 
+If you are using WSL, **powershell.exe -c Get-Clipboard** will work.
 
 ### Other Commands
 
